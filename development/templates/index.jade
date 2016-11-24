@@ -3,6 +3,53 @@ html(lang="en")
   head
     title ZERE Travel
     link(rel="stylesheet", href="../dist/main.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext")
   body
     header.site-header
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia provident repellendus dignissimos fugit obcaecati tempora nihil ipsam voluptatem, sunt quibusdam, odio quisquam cum, tenetur odit quod reiciendis, distinctio et recusandae.
+      .container
+        .row.row--no-gutter.row--flex.border-bottom.padding-top-bottom
+          .col.col--1-of-4
+            a(href="#").logo
+              img(src="../dist/images/logo3.png", alt="")
+          .col.col--1-of-4
+          .col.col--1-of-4.col--am.col--flex
+            span.nav-phone Звоните нам 24/7:
+            span.nav-phone.bold +7(777)996-89-98
+            span.nav-phone.bold +7(7232)40-26-74
+          .col.col--1-of-4.col--am.col--flex
+            span.nav-address Наш адрес:
+            span.nav-address.bold ВКО, г. Усть-Каменогорск,
+            span.nav-address.bold Токтарова 99A
+          
+        .row.row--no-gutter.nav-bottom
+          .col.col--12-of-12
+            nav
+              a(href="#").nav-link Страны
+              a(href="#").nav-link Идеи для отдыха
+              a(href="#").nav-link Спец предложения
+              a(href="#").nav-link Санатории
+              a(href="#").nav-link О компании
+              a(href="#").nav-link Фотоальбом
+              a(href="#").nav-link Дополнительно
+              
+    section.image-slider
+      .container
+        .row.row--no-gutter
+          .col.col--12-of-12
+            .slides
+              
+              .slides__item.active
+                span.slides__item__title Бухтарминское водохранилище
+              .slides__item
+                span.slides__item__title Курорты Турции
+              .slides__item
+                span.slides__item__title Курорты Алаколь
+              .slides__item
+                span.slides__item__title Курорты Алаколь
+                
+              h3.slides__title Отдыхайте с ZERE Travel в любой точке мира
+              
+              
+    script(src="../development/scripts/main.js")
+               
+                

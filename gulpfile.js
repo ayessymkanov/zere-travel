@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCss = require('gulp-clean-css'),
-    imageMin = require('gulp-imagemin');
+    imageMin = require('gulp-imagemin'),
+    jsmin = require('gulp-minify');
 
 gulp.task('styles', function() {
   return gulp.src('./development/styles/main.sass')
@@ -30,11 +31,18 @@ gulp.task('imagemin', function() {
   .pipe(gulp.dest('./dist/images'));
 })
 
-
-gulp.task('watch', function() {
-  gulp.watch('./development/styles/*.sass', ['styles']);
-  gulp.watch('./development/templates/*.jade', ['jade']);
-  gulp.watch('./development/img/*', ['imagemin']);
+gulp.task('jsmin', function() {
+  return gulp.src('./development/scripts/*.js')
+  .pipe(jsmin())
+  .pipe(gulp.dest('./dist'));
 })
 
-gulp.task('default', ['styles', 'jade', 'imagemin', 'watch']);
+
+gulp.task('watch', function() {
+  gulp.watch('./development/styles/components/*.sass', ['styles']);
+  gulp.watch('./development/templates/*.jade', ['jade']);
+  gulp.watch('./development/img/*', ['imagemin']);
+  // gulp.watch('./development/scripts/*.js', ['jsmin']);
+})
+
+gulp.task('default', ['watch', 'styles', 'jade', 'imagemin']);

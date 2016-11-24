@@ -1,0 +1,52 @@
+.site-header
+  // height: 350px
+  background-color: $purple
+  position: relative
+
+  &::after
+    position: absolute
+    height: 150px
+    display: block
+    content: " "
+    width: 100%
+    background-color: inherit
+    z-index: 1
+
+
+.logo
+  display: block
+
+  & > img
+    width: 100px
+    height: auto
+
+nav
+  display: flex
+  padding-left: 0
+  padding: 10px 0
+
+.nav-link
+  flex-grow: 1
+  padding: 10px
+  text-decoration: none
+  // font-size: 14px
+  text-align: center
+  border-radius: 5px
+  transition: all 100ms
+
+  &:link,
+  &:active,
+  &:visited
+    color: white
+  &:hover
+    background-color: white
+    color: $purple
+
+.nav-phone,
+.nav-address
+  display: block
+  color: white
+  text-align: center
+
+.bold
+  font-weight: bold
