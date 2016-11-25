@@ -51,7 +51,8 @@ $toast-pulls: true !default;
 
 .#{$toast-grid-namespace} {
   list-style: none;
-  margin-left: -$toast-gutter-width;
+  // margin-left: -$toast-gutter-width;
+  width: 100%;
 }
 
 %span-all       { width: percentage(1/1); }
@@ -218,6 +219,14 @@ $toast-pulls: true !default;
     &[class*="#{$toast-grid-column-namespace}--s-"] {
       display: inline-block;
       margin-right: -.24em;
+    }
+
+    &.#{$toast-grid-column-namespace}--s-hidden {
+      display: none;
+    }
+
+    &.#{$toast-grid-column-namespace}--s-1-of-1 {
+      width: percentage(1/1);
     }
 
     &.#{$toast-grid-column-namespace}--s-1-of-2 {

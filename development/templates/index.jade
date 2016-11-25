@@ -2,21 +2,23 @@ doctype html
 html(lang="en")
   head
     title ZERE Travel
+    meta(charset="UTF-8")
+    meta(description="Курортные районы и базы отдыха Восточного Казахстана") 
     link(rel="stylesheet", href="../dist/main.css")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext")
   body
     header.site-header
       .container
         .row.row--no-gutter.row--flex.border-bottom.padding-top-bottom
-          .col.col--1-of-4
+          .col.col--1-of-4.col--m-1-of-3.col--s-2-of-3.col--centered
             a(href="#").logo
               img(src="../dist/images/logo3.png", alt="")
           .col.col--1-of-4
-          .col.col--1-of-4.col--am.col--flex
+          .col.col--1-of-4.col--am.col--m-1-of-3.col--flex.col--s-hidden
             span.nav-phone Звоните нам 24/7:
             span.nav-phone.bold +7(777)996-89-98
             span.nav-phone.bold +7(7232)40-26-74
-          .col.col--1-of-4.col--am.col--flex
+          .col.col--1-of-4.col--am.col--m-1-of-3.col--flex.col--s-hidden
             span.nav-address Наш адрес:
             span.nav-address.bold ВКО, г. Усть-Каменогорск,
             span.nav-address.bold Токтарова 99A
@@ -52,8 +54,46 @@ html(lang="en")
                 span.slides__navigation__item
                 span.slides__navigation__item
                 span.slides__navigation__item
-              
-              
+                
+    section.about 
+      .container
+        .row
+          .col.col--12-of-12
+            .text-wrapper
+              h1.about__title.ta--center Почему ZERE Travel?
+              p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem alias officiis aut deserunt, ducimus consequuntur, molestias dolorum ipsam iure, maxime voluptatibus, voluptas optio itaque quis quas minus asperiores ipsa neque.
+                
+    section.suggested-places
+      .container
+        .row
+          .col--12-of-12
+            h2.ta--center Курорты Восточного Казахстана
+        .row.row--no-gutter
+          .col.col--4-of-12
+            .place.alakol
+              .place__thumbnail
+              .place__text
+                .place__title
+                  span База отдыха “Фаворит”
+                .place__where
+                  span Озеро Алаколь
+              .place__go-btn
+                
+          .col.col--4-of-12
+            .place.buhtarma
+              .place__thumbnail
+              .place__text
+                .place__title
+                .place__where
+              .place__go-btn
+          .col.col--4-of-12
+            .place.katon
+              .place__thumbnail
+              .place__text
+                .place__title
+                .place__where
+              .place__go-btn
+
     script(src="../development/scripts/main.js")
                
                 

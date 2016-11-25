@@ -1,0 +1,67 @@
+.suggested-places
+  padding: $padding_internal_section
+
+  & > row:first-child
+    padding-left: $padding_internal_section
+
+.place
+  position: relative
+  width: 90%
+  height: 250px
+  margin: 0 auto
+  margin-bottom: 20px
+  padding: 10px
+  border: 1px solid #ccc
+  border-radius: $border-radius
+  transition: border-color 300ms
+
+  &:hover
+    border-color: $purple
+
+  & > .place__thumbnail
+    height: 150px
+    background-size: cover
+
+.alakol .place__thumbnail
+  background-image: url("../dist/images/ala.jpg")
+.buhtarma .place__thumbnail
+  background-image: url("../dist/images/buhtarma.jpg")
+.katon .place__thumbnail
+  background-image: url("../dist/images/katon.jpg")
+
+
+.place__text
+  // border: 1px solid black
+  margin-top: 20px
+  color: $purple
+
+.place__title
+  font-weight: 700
+
+.place__where
+  font-size: 0.9em
+
+.place__go-btn
+  position: absolute
+  bottom: 40px
+  right: $padding_internal
+  // border: 1px solid black
+
+  &::before,
+  &::after
+    position: absolute
+    top: 50%
+    right: -100%
+    transform: translateY(-50%)
+    display: inline-block
+    content: ""
+    width: 20px
+    height: 5px
+    background-color: #ccc
+    transform-origin: right center
+    border-radius: $border-radius
+
+  &::before
+    transform: rotateZ(45deg)
+  &::after
+    transform: rotateZ(-45deg)

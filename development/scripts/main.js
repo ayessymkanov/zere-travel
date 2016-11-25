@@ -14,6 +14,5 @@
     slides[++count].classList.toggle('active');
     slidesNav[count].classList.toggle('current');
 
-    console.log(count);
-  }, 3000);
+  }, 2000);
 })();
