@@ -16,3 +16,24 @@
 
   }, 2000);
 })();
+
+(function() {
+  var menuBtn = document.querySelector('.menu-btn'),
+      nav = document.querySelector('nav'),
+      navLink = document.querySelectorAll('.nav-link');
+  menuBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    this.classList.toggle('clicked');
+    nav.classList.toggle('shown');
+  });
+
+  for(var i = 0; i < navLink.length; ++i) {
+    navLink[i].addEventListener('click', function(i) {
+      console.log('navlink clicked');
+      nav.classList.remove('shown');
+    });
+  }
+
+
+
+})();

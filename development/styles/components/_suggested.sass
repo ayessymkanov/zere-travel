@@ -31,6 +31,7 @@
 
 
 .place__text
+  position: relative
   // border: 1px solid black
   margin-top: 20px
   color: $purple
@@ -43,9 +44,10 @@
 
 .place__go-btn
   position: absolute
-  bottom: 40px
+  top: 50%
   right: $padding_internal
-  // border: 1px solid black
+  transform: translateY(-50%)
+  height: 40px
 
   &::before,
   &::after
@@ -63,5 +65,6 @@
 
   &::before
     transform: rotateZ(45deg)
+    top: 55%
   &::after
     transform: rotateZ(-45deg)
